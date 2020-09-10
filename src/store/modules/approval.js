@@ -8,7 +8,7 @@ export default {
   actions: {
     createApproval (context, data) {
       return fetch(
-        `http://availability.ua/api/v1/request/${data.requestId}/approval`, {
+        `http://cm.availability.ua/api/v1/request/${data.requestId}/approval`, {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -20,7 +20,7 @@ export default {
     },
     async updateApproval (context, { approvalId, data }) {
       const res = await fetch(
-        'http://availability.ua/api/v1/request/approval/' + approvalId, {
+        'http://cm.availability.ua/api/v1/request/approval/' + approvalId, {
           method: 'PUT',
           headers: {
             'Accept': 'application/json',
